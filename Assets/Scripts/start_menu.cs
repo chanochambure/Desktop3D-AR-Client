@@ -34,7 +34,7 @@ public class start_menu : MonoBehaviour {
 	void Update () {
 		if (ClientConn.Instance.status_connection == 2) {
 			waiting_connection = false;
-			SceneManager.LoadScene(1);
+			SceneManager.LoadScene("Desktop3D");
 		}
 		if (waiting_connection && ClientConn.Instance.status_connection == 0) {
 			mainError.text = "Fallo la Conexión";
