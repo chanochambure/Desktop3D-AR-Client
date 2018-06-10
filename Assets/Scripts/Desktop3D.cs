@@ -10,13 +10,13 @@ using Gvr.Internal;
 
 public class Desktop3D : MonoBehaviour {
 	private int reconnection_test = 1;
-	private int max_reconnection_test = 10;
-	private Text mainReconnection;
+	private int max_reconnection_test = 5;
+	private TextMesh mainReconnection;
 	private List<LineRenderer> lines= new List<LineRenderer>();
 	// Use this for initialization
 	void Start () {
 		VRSettings.enabled = true;
-		mainReconnection = (Text)GameObject.Find ("Reconnection").GetComponent<Text> ();
+		mainReconnection = (TextMesh)GameObject.Find ("Reconnection").GetComponent<TextMesh> ();
 		for (int i = 0; i < ClientConn.NUMBER_HAND; i++) {
 			for (int j = 0; j < ClientConn.NUMBER_FINGER; j++) {
 				for (int k = 0; k < (ClientConn.NUMBER_BONES - 1); k++) {
